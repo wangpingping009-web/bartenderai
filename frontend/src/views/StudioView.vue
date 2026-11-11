@@ -6,6 +6,7 @@ import AgentMixingStage from '../components/AgentMixingStage.vue'
 import FlavorRadar from '../components/FlavorRadar.vue'
 import { emitMotion } from '../motion'
 
+const isDemo = import.meta.env.MODE === 'demo'
 const personas = ref([]), persona = ref('classic'), preferences = ref(''), bases = ref([]), result = ref(null), creations = ref([]), inventory = ref([])
 const busy = ref(false), error = ref(''), stages = ref([]), useInventory = ref(false)
 const baseOptions = [['gin', '金酒'], ['vodka', '伏特加'], ['rum', '朗姆'], ['tequila', '龙舌兰'], ['whiskey', '威士忌'], ['brandy', '白兰地']]
@@ -16,8 +17,8 @@ const latestStages = computed(() => {
 })
 const agentNames = { brief: '需求分析', evidence: '参考检索', create: '配方构建', revise: '定向修订', rules: '规则质检', review: '出品复核', ready: '最终确认' }
 function agentName(stage) { return agentNames[stage] || '协作环节' }
-function creationMode(mode) { return mode === 'local_rules' ? '本地规则创作' : mode === 'model_rules_review' ? '模型创作 · 规则复核' : '多 Agent 原创' }
-function reviewMode(mode) { return mode === 'local_rules' ? '规则复核通过' : mode === 'model_rules_review' ? '本地复核通过' : '独立审校通过' }
+function creationMode(mode) { if (isDemo) return '本地模板试调'; return mode === 'local_rules' ? '本地规则创作' : mode === 'model_rules_review' ? '模型创作 · 规则复核' : '多 Agent 原创' }
+function reviewMode(mode) { if (isDemo) return '沿用示例配方'; return mode === 'local_rules' ? '规则复核通过' : mode === 'model_rules_review' ? '本地复核通过' : '独立审校通过' }
 function stageInteract(event) { emitMotion('agent', { label: event.agent || 'field' }) }
 
 watch([persona, () => bases.value.join(',')], ([selectedPersona, selectedBases]) => {
@@ -47,7 +48,7 @@ async function generate() {
 
 <template>
   <div class="page">
-    <header class="page-head"><div><h1>AI 创作室</h1><p>说出你想喝的味道，创作、复核和修订会围绕同一个目标协作。</p></div></header>
+    <header class="page-head"><div><h1>AI 创作室</h1><p>{{ isDemo ? '用浏览器规则匹配一款示例配方，生成可保存的试调档案。' : '说出你想喝的味道，创作、复核和修订会围绕同一个目标协作。' }}</p></div></header>
     <div class="studio-grid">
       <section class="creation-form">
         <h2>设定这杯酒</h2>
@@ -75,7 +76,7 @@ async function generate() {
       </section>
     </div>
 
-    <section class="history"><div class="history-head"><h2>我的原创配方</h2><span>{{ creations.length }} 杯</span></div><div v-if="!creations.length" class="muted">还没有保存的原创配方。</div><div v-else class="grid grid-3"><router-link v-for="(item,index) in creations" :key="item.id" :to="`/studio/creations/${item.id}`" class="creation-item" :style="{'--order':index}"><div><small>{{ item.created_at?.slice(0, 10) }}</small><ArrowUpRight :size="17"/></div><h3>{{ item.recipe.name_cn || item.recipe.name }}</h3><p>{{ item.recipe.description || item.recipe.tips || item.recipe.steps?.[0] }}</p><span>{{ item.recipe.ingredients?.length || 0 }} 种材料 · {{ item.recipe.steps?.length || 0 }} 步</span></router-link></div></section>
+    <section class="history"><div class="history-head"><h2>{{ isDemo ? '我的试调档案' : '我的原创配方' }}</h2><span>{{ creations.length }} 杯</span></div><div v-if="!creations.length" class="muted">{{ isDemo ? '还没有保存的试调档案。' : '还没有保存的原创配方。' }}</div><div v-else class="grid grid-3"><router-link v-for="(item,index) in creations" :key="item.id" :to="`/studio/creations/${item.id}`" class="creation-item" :style="{'--order':index}"><div><small>{{ item.created_at?.slice(0, 10) }}</small><ArrowUpRight :size="17"/></div><h3>{{ item.recipe.name_cn || item.recipe.name }}</h3><p>{{ item.recipe.description || item.recipe.tips || item.recipe.steps?.[0] }}</p><span>{{ item.recipe.ingredients?.length || 0 }} 种材料 · {{ item.recipe.steps?.length || 0 }} 步</span></router-link></div></section>
   </div>
 </template>
 

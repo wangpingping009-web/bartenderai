@@ -28,7 +28,7 @@ LLM_PROVIDER_PRIORITY=deepseek,qwen,local
 
 [打开 BartenderAI Demo](https://wangpingping009-web.github.io/bartenderai/)
 
-在线演示包含 8 款示例配方，支持中英文搜索、筛选、3D 粒子预览、分步调制和配方卡下载。收藏和评分保存在当前浏览器。账号、AI 调酒、拍照识方与完整配方库可通过下方的本地启动方式体验。
+在线演示开放调酒台、配方探索、创作室、实验室、酒柜、场景酒单、拍照识方、个人中心和控制台。调酒台与创作室使用浏览器内的规则和 8 款示例配方。拍照识方提供本地照片预览与固定结果样例，控制台提供只读界面。酒柜、会话、试调档案、收藏和偏好保存在当前浏览器。完整配方库、实时模型、账号与后台运维可通过下方的本地启动方式体验。
 
 `main` 分支更新后，GitHub Actions 会重新构建并发布演示。首次部署时，在仓库的 **Settings → Pages** 中将 **Source** 设为 **GitHub Actions**。本地可在 `frontend` 目录执行 `npm ci`、`npm run build:demo` 和 `npm run preview` 预览演示。
 

@@ -22,7 +22,7 @@ const routes = [
 const isDemo = import.meta.env.MODE === 'demo'
 const demoRoutes = [
   { path: '/', redirect: '/explore' },
-  ...routes.filter(route => ['/explore', '/recipes/:id'].includes(route.path)),
+  ...routes.filter(route => route.meta?.title),
   { path: '/:pathMatch(.*)*', redirect: '/explore' },
 ]
 const router = createRouter({

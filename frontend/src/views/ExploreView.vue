@@ -1,6 +1,7 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue'
 import { ArrowRight, ArrowUpDown, RotateCcw, Search, SlidersHorizontal, Sparkles, X } from 'lucide-vue-next'
+import { useRoute } from 'vue-router'
 import { api } from '../api'
 import CocktailParticleScene from '../components/CocktailParticleScene.vue'
 import RecipeTile from '../components/RecipeTile.vue'
@@ -8,7 +9,8 @@ import { emitMotion } from '../motion'
 
 const isDemo = import.meta.env.MODE === 'demo'
 const defaults = { q: '', category: '', base_spirit: '', alcoholic: '', flavor: '', abv_min: '', abv_max: '', available_only: false, favorites_only: false, sort: '', page: 1, page_size: 24 }
-const filters = reactive({ ...defaults })
+const route = useRoute()
+const filters = reactive({ ...defaults, q: typeof route.query.q === 'string' ? route.query.q : '' })
 const items = ref([]), total = ref(0), loading = ref(true), error = ref(''), favorites = ref(new Set())
 const previewRecipe = ref(null), previewUnavailable = ref(false)
 let searchTimer
@@ -53,7 +55,7 @@ onBeforeUnmount(() => { window.removeEventListener('keydown', handleKeydown); do
     <section class="discovery-tools">
       <div class="search-wrap"><Search :size="19"/><input v-model="filters.q" placeholder="搜索酒名或材料，例如：金酒 柠檬" @input="schedule"/></div>
       <div class="quick-row"><span>快速选择</span><button v-for="item in quickFilters" :key="item.label" @click="applyQuick(item)">{{ item.label }}</button></div>
-      <div class="filter-row"><SlidersHorizontal :size="17"/><select v-model="filters.base_spirit" @change="search"><option value="">全部基酒</option><option v-for="item in baseOptions" :key="item[0]" :value="item[0]">{{ item[1] }}</option></select><select v-if="!isDemo" v-model="filters.category" @change="search"><option value="">全部类别</option><option value="Cocktail">鸡尾酒</option><option value="Ordinary Drink">经典与日常</option><option value="Shot">短饮与烈酒杯</option><option value="Punch / Party Drink">宾治与聚会酒</option><option value="Homemade Liqueur">自制利口酒</option></select><select v-model="filters.flavor" @change="search"><option value="">全部风味</option><option value="sweet">偏甜</option><option value="sour">偏酸</option><option value="bitter">偏苦</option><option value="strong">酒感强</option><option value="aroma">香气突出</option></select><select v-model="filters.alcoholic" @change="search"><option value="">含酒精与零酒</option><option value="true">含酒精</option><option value="false">无酒精</option></select><label v-if="isDemo" class="inventory-toggle"><input type="checkbox" v-model="filters.favorites_only" @change="search"/><span>仅看收藏</span></label><label v-else class="inventory-toggle"><input type="checkbox" v-model="filters.available_only" @change="search"/><span>酒柜可调</span></label></div>
+      <div class="filter-row"><SlidersHorizontal :size="17"/><select v-model="filters.base_spirit" @change="search"><option value="">全部基酒</option><option v-for="item in baseOptions" :key="item[0]" :value="item[0]">{{ item[1] }}</option></select><select v-if="!isDemo" v-model="filters.category" @change="search"><option value="">全部类别</option><option value="Cocktail">鸡尾酒</option><option value="Ordinary Drink">经典与日常</option><option value="Shot">短饮与烈酒杯</option><option value="Punch / Party Drink">宾治与聚会酒</option><option value="Homemade Liqueur">自制利口酒</option></select><select v-model="filters.flavor" @change="search"><option value="">全部风味</option><option value="sweet">偏甜</option><option value="sour">偏酸</option><option value="bitter">偏苦</option><option value="strong">酒感强</option><option value="aroma">香气突出</option></select><select v-model="filters.alcoholic" @change="search"><option value="">含酒精与零酒</option><option value="true">含酒精</option><option value="false">无酒精</option></select><label v-if="isDemo" class="inventory-toggle"><input type="checkbox" v-model="filters.favorites_only" @change="search"/><span>仅看收藏</span></label><label class="inventory-toggle"><input type="checkbox" v-model="filters.available_only" @change="search"/><span>酒柜可调</span></label></div>
       <div class="range-row"><label>酒精度</label><input type="number" min="0" max="100" v-model="filters.abv_min" placeholder="最低" @change="search"/><span>至</span><input type="number" min="0" max="100" v-model="filters.abv_max" placeholder="最高" @change="search"/><label class="sort-label"><ArrowUpDown :size="14"/>排序</label><select v-model="filters.sort" @change="search"><option value="">默认顺序</option><option value="name">名称</option><option value="abv_asc">酒精度从低到高</option><option value="abv_desc">酒精度从高到低</option><option value="sweet">甜度优先</option><option value="sour">酸度优先</option><option value="aroma">香气优先</option></select><button v-if="activeCount" class="reset" @click="reset"><RotateCcw :size="14"/>清除 {{ activeCount }} 项筛选</button></div>
     </section>
     <div v-if="loading" class="state">正在整理配方...</div><div v-else-if="error" class="state"><div><strong>配方加载失败</strong>{{ error }}<br/><button class="btn" @click="load">重试</button></div></div><div v-else-if="!items.length" class="state"><div><strong>没有符合条件的配方</strong>试试减少筛选条件，或换一个材料关键词。<br/><button class="btn" @click="reset">查看全部配方</button></div></div>

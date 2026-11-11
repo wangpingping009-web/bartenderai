@@ -51,6 +51,10 @@ function query(params = {}) {
 }
 
 export async function streamConversation(conversationId, message, onEvent, signal) {
+  if (import.meta.env.MODE === 'demo') {
+    const { demoChat } = await import('./demo')
+    return demoChat(conversationId, message, onEvent, signal)
+  }
   const headers = new Headers({ 'Content-Type': 'application/json' })
   if (accessToken) headers.set('Authorization', `Bearer ${accessToken}`)
   const response = await fetch(`/api/conversations/${conversationId}/messages/stream`, {
@@ -74,6 +78,10 @@ export async function streamConversation(conversationId, message, onEvent, signa
 }
 
 export async function streamRecipeCreation(payload, onEvent, signal) {
+  if (import.meta.env.MODE === 'demo') {
+    const { demoCreate } = await import('./demo')
+    return demoCreate(payload, onEvent, signal)
+  }
   const headers = new Headers({ 'Content-Type': 'application/json' })
   if (accessToken) headers.set('Authorization', `Bearer ${accessToken}`)
   const response = await fetch('/api/recipes/generate/stream', {

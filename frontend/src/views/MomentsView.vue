@@ -57,9 +57,13 @@ function adjustGuests(change) {
   emitMotion('guest-count', { label: String(party.value.headcount) })
 }
 async function plan() {
-  banquet.value = await api.fun.banquet({ names: party.value.names.split(',').map(value => value.trim()).filter(Boolean), headcount: party.value.headcount, mocktail: party.value.mocktail })
-  progress.value = await api.fun.progress()
-  emitMotion('banquet-ready', { label: String(party.value.headcount) })
+  error.value = ''
+  banquet.value = null
+  try {
+    banquet.value = await api.fun.banquet({ names: party.value.names.split(/[,，]/).map(value => value.trim()).filter(Boolean), headcount: party.value.headcount, mocktail: party.value.mocktail })
+    progress.value = await api.fun.progress()
+    emitMotion('banquet-ready', { label: String(party.value.headcount) })
+  } catch (e) { error.value = e.message }
 }
 function handleKeydown(event) { if (event.key === 'Escape' && previewRecipe.value) closePreview() }
 
@@ -101,7 +105,7 @@ onBeforeUnmount(() => { window.removeEventListener('keydown', handleKeydown); do
         <div class="party-row"><div class="field guest-stepper"><label>人数</label><div><button type="button" aria-label="减少一位宾客" @click="adjustGuests(-1)"><Minus :size="15" /></button><input class="input" type="number" min="1" max="100" v-model.number="party.headcount" /><button type="button" aria-label="增加一位宾客" @click="adjustGuests(1)"><Plus :size="15" /></button></div></div><label><input type="checkbox" v-model="party.mocktail" />全部改为零酒</label></div>
         <div class="guest-field" :data-headcount="party.headcount" aria-hidden="true"><span v-for="guest in guestDots" :key="guest" :style="{ '--guest': guest }"><i /></span><b v-if="overflowGuests">+{{ overflowGuests }}</b></div>
         <button class="btn primary" @click="plan">计算备料</button>
-        <div v-if="banquet" class="banquet"><article v-for="(cocktail, index) in banquet.cocktails" :key="cocktail.name" :style="{ '--pour-order': index }"><b>{{ cocktail.name }}</b><span v-for="item in cocktail.ingredients" :key="item.name">{{ item.name }} {{ item.for_n }}ml</span></article></div>
+        <p v-if="banquet?.unknown?.length" class="muted">未找到配方：{{ banquet.unknown.join('、') }}</p><div v-if="banquet" class="banquet"><article v-for="(cocktail, index) in banquet.cocktails" :key="cocktail.name" :style="{ '--pour-order': index }"><b>{{ cocktail.name }}</b><span v-for="item in cocktail.ingredients" :key="item.name">{{ item.name }} {{ item.amount_text || `${item.for_n} ml` }}</span></article></div>
       </div>
     </section>
 

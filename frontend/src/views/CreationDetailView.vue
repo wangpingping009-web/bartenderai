@@ -17,7 +17,8 @@ const collaboration = computed(() => {
   for (const event of item.value?.collaboration || []) byStage.set(event.stage, event)
   return [...byStage.values()]
 })
-const creationMode = computed(() => item.value?.capability_mode === 'local_rules' ? '本地规则创作' : item.value?.capability_mode === 'model_rules_review' ? '模型创作 · 规则复核' : '多 Agent 原创配方')
+const isDemo = import.meta.env.MODE === 'demo'
+const creationMode = computed(() => isDemo ? '本地模板试调' : item.value?.capability_mode === 'local_rules' ? '本地规则创作' : item.value?.capability_mode === 'model_rules_review' ? '模型创作 · 规则复核' : '多 Agent 原创配方')
 
 onMounted(async () => {
   try { item.value = await api.recipes.creation(route.params.id) }
