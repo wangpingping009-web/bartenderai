@@ -1,0 +1,20 @@
+[
+  {
+    "id": "guide_tools",
+    "doc_type": "guide",
+    "title": "Beginner Bar Tools 新手调酒必备工具清单",
+    "title_cn": "新手调酒必备工具清单",
+    "content": "Essential bar tools for a beginner home bartender. 1) Shaker (cobbler or Boston): the core tool for shaken cocktails. 2) Jigger: a double-sided measure (usually 1 oz / 1.5 oz) for precise ratios. 3) Hawthorne strainer: strains ice and pulp when pouring. 4) Fine mesh strainer: double-strain for egg white or fine ice. 5) Bar spoon: for stirring and layering. 6) Muddler: to crush mint, fruit or sugar cubes. 7) Citrus press: fresh lime and lemon juice makes a huge difference. 8) Ice: both large cubes and crushed ice — you will use a lot. 9) Basic glassware: highball, old fashioned/rocks, and martini glasses (2-3 types is enough to start). 10) Mixing glass or a pint glass can substitute. 11) Optional: kitchen scale and small measuring cups for scaling recipes. Start with tools 1-8 and add the rest as you grow.",
+    "content_cn": "新手在家调酒，备齐这套工具就能开张。1) 摇酒壶（三段式或波士顿式）：摇和类鸡尾酒的核心工具。2) 量酒器：双头量杯（通常 1盎司/1.5盎司），保证配方比例精准。3) 滤冰器：倒出酒液时挡住冰块和果肉。4) 细滤网：做蛋清泡沫或碎冰类需要二次过滤。5) 吧勺：搅拌与分层用。6) 捣棒：捣压薄荷、水果或方糖。7) 榨汁器：青柠柠檬现榨，风味远胜瓶装汁。8) 冰块：大冰块+碎冰都要备，摇和与冰镇用量很大。9) 基础杯具：高球杯、古典杯、马天尼杯，先入手 2-3 种足够。10) 调酒杯（没有可用品脱杯替代）。11) 可选：厨房秤和小量杯，方便按人数换算配方。新手建议先备 1-8 项，其余随需求再添。",
+    "tags": ["guide", "tools", "equipment", "新手", "工具", "入门", "必备", "shaker", "jigger", "strainer", "bar-spoon", "muddler"]
+  },
+  {
+    "id": "guide_materials",
+    "doc_type": "guide",
+    "title": "Starter Bar 新手调酒必备材料清单",
+    "title_cn": "新手调酒必备材料清单",
+    "content": "Starter ingredients to stock for a beginner home bar. Base spirits: pick 2-3 most versatile — Vodka, White Rum, Gin (Vodka mixes with almost anything, Gin is the backbone of classic cocktails, White Rum covers Mojito/Daiquiri). Liqueur: one all-rounder such as Cointreau (orange) or Dry Vermouth. Fresh citrus: limes AND lemons — keep both, they are the acid backbone of most drinks. Sweetener: simple syrup (sugar:water 1:1) is the default; honey or agave syrup work too. Bitters: one bottle of Angostura lasts a long time and unlocks classic stirred drinks. Bubbles: soda water, tonic water, ginger ale. Ice: lots of it. This starter set of about 8-10 bottles covers dozens of classic cocktails.",
+    "content_cn": "新手吧台备齐这批材料，就能覆盖几十款经典鸡尾酒。基酒：先买最百搭的 2-3 款——伏特加（和什么都能搭）、金酒（经典鸡尾酒的骨架）、白朗姆（莫吉托/代基里的主角）。利口酒：备一款万能的，如君度橙酒或干味美思。新鲜酸：青柠和柠檬都要常备，它们是多数组方的酸味骨架。甜：单糖浆（糖:水=1:1）是默认选择，蜂蜜或龙舌兰糖浆也可。苦精：一瓶安高天娜能用很久，解锁尼格罗尼、古典等风味。气泡：苏打水、汤力水、姜汁啤酒。冰块：大量备足。这套约 8-10 瓶的入门配置就能轻松调出几十款经典鸡尾酒。",
+    "tags": ["guide", "ingredients", "starter", "新手", "材料", "入门", "必备", "base-spirit", "vodka", "gin", "rum", "simple-syrup", "citrus", "bitters"]
+  }
+]

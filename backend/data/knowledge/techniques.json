@@ -1,0 +1,83 @@
+[
+  {
+    "id": "tech_shake",
+    "doc_type": "technique",
+    "title": "Shake 摇和法",
+    "title_cn": "摇和法（Shake）",
+    "content": "Shaking combines ingredients with ice to chill, dilute and aerate, essential for drinks with citrus juice, dairy, eggs or syrups. Method: fill shaker 2/3 with ice, add ingredients, shake vigorously 10-15 seconds (or until shaker is frosty), double-strain into glass. Hard shake technique adds air for silky texture. Standard time about 15 seconds for drinks containing juice.",
+    "content_cn": "摇和法用于混合材料与冰块，实现降温、稀释和充气，是含果汁、乳制品、蛋清或糖浆饮品的必备技法。方法：雪克壶装 2/3 冰块，倒入材料，用力摇 10-15 秒（或摇至壶身结霜），双重过滤倒入杯中。‘硬摇’（Hard Shake）手法可增加气泡，让口感更丝滑。标准时间约 15 秒。英中术语：Shake=摇和法，Double-strain=双重过滤，Hard shake=硬摇。",
+    "tags": ["technique", "shake", "ice", "aeration", "core"]
+  },
+  {
+    "id": "tech_stir",
+    "doc_type": "technique",
+    "title": "Stir 搅拌法",
+    "title_cn": "搅拌法（Stir）",
+    "content": "Stirring gently mixes spirits and modifiers with ice for precise dilution and chilling without aeration. Used for spirit-forward cocktails like Martini, Manhattan, Old Fashioned, Negroni. Method: fill mixing glass with ice, add ingredients, stir with bar spoon 20-30 seconds (or until properly diluted, about 30 rotations), strain into chilled glass. Stirring keeps the drink silky and clear.",
+    "content_cn": "搅拌法温和地混合烈酒与调味材料，实现精准降温和稀释，不引入气泡，适合‘烈酒主导’的鸡尾酒，如马提尼、曼哈顿、古典、尼格罗尼。方法：搅拌杯加冰，倒入材料，用吧勺搅拌 20-30 秒（约 30 圈），过滤倒入冰镇酒杯。搅拌能让酒体保持丝滑清澈。判断标准：搅拌至杯壁大量结霜。英中术语：Stir=搅拌法，Bar spoon=吧勺，Strain=过滤。",
+    "tags": ["technique", "stir", "spirit-forward", "core"]
+  },
+  {
+    "id": "tech_muddle",
+    "doc_type": "technique",
+    "title": "Muddle 捣压法",
+    "title_cn": "捣压法（Muddle）",
+    "content": "Muddling gently crushes fresh ingredients (mint, fruit, sugar cubes) to release oils and juices without over-tearing the plant material. Used in Mojito, Old Fashioned, Caipirinha, Mint Julep. Method: add herbs/fruit and sugar or bitters to glass, press gently with muddler (2-3 gentle twists), then add spirits and ice. Avoid crushing mint too hard (releases bitterness).",
+    "content_cn": "捣压法轻轻碾碎新鲜材料（薄荷、水果、方糖），释放精油和汁液，但不过度撕裂植物纤维。用于莫吉托、古典、卡皮里尼亚、薄荷朱利普。方法：杯中加入香草/水果与糖或苦精，用捣棒轻压 2-3 下旋转，再加入烈酒和冰块。注意：薄荷不能压太重，否则会释放苦味。英中术语：Muddle=捣压法，Muddler=捣棒。",
+    "tags": ["technique", "muddle", "fresh", "herbs"]
+  },
+  {
+    "id": "tech_build",
+    "doc_type": "technique",
+    "title": "Build 直接注入法",
+    "title_cn": "直接注入法（Build）",
+    "content": "Building means mixing ingredients directly in the serving glass, often with carbonated mixers. Used for Highball, Gin Tonic, Cuba Libre, Screwdriver. Method: add spirits, then mixer, add ice (if needed), stir gently once. Carbonated drinks are built not shaken to preserve fizz. Typically served with a lime wedge garnish.",
+    "content_cn": "直接注入法是在服务杯中直接混合材料，常用于含碳酸饮料的高杯饮品，如高球（Highball）、金汤力、自由古巴、螺丝刀。方法：先加烈酒，再加碳酸饮料，加冰（如需），轻轻搅拌一次。含碳酸的饮品必须用直接注入法而非摇和，以保留气泡。英中术语：Build=直接注入法，Highball glass=高球杯。",
+    "tags": ["technique", "build", "carbonated", "highball"]
+  },
+  {
+    "id": "tech_layer",
+    "doc_type": "technique",
+    "title": "Layer 分层法",
+    "title_cn": "分层法（Layer）",
+    "content": "Layering creates visually distinct layers by pouring denser liquids first, then lighter liquids over the back of a spoon. Used in B-52, Pousse-Café, Rainbow shots. Density order (typical): grenadine (heaviest) < cream < liqueurs < spirits. Method: pour heaviest layer first, tilt glass, pour next liquid slowly over the back of a rounded spoon. Requires steady hand.",
+    "content_cn": "分层法利用液体密度差异，先倒入较重液体，再用勺子背面引流较轻液体，形成视觉分明的层次。用于 B-52、彩虹鸡尾酒等烈酒类。常见密度顺序（重到轻）：红石榴糖浆 < 奶油 < 利口酒 < 烈酒。方法：先倒最重的底层，倾斜酒杯，沿圆勺背面缓慢倒入下一层。需要稳定的手。英中术语：Layer=分层法，Pousse-café=彩虹杯。",
+    "tags": ["technique", "layer", "density", "shot"]
+  },
+  {
+    "id": "tech_float",
+    "doc_type": "technique",
+    "title": "Float 漂浮法",
+    "title_cn": "漂浮法（Float）",
+    "content": "Floating carefully pours a lighter liquid on top of a heavier drink without mixing, creating a two-layer effect and gradual flavor release. Used in B-52, Long Island Iced Tea, Harvey Wallbanger. Method: pour the base drink, then slowly pour the floating spirit over the back of a spoon held just above the surface. The top layer is often ignited (Flaming Drinks) or sipped separately.",
+    "content_cn": "漂浮法将较轻的液体缓慢倒在没有混合的较重饮品表面，形成两层效果，风味随饮用逐渐释放。用于 B-52、长岛冰茶（顶部的可乐层）、哈维撞墙。方法：先倒基底饮品，再用勺背紧贴液面缓慢倒入漂浮烈酒。顶层有时会点燃（火焰饮品）。英中术语：Float=漂浮法，Rim=杯沿（裹盐/糖）。",
+    "tags": ["technique", "float", "layering", "presentation"]
+  },
+  {
+    "id": "tech_rim",
+    "doc_type": "technique",
+    "title": "Rimming 杯沿装饰",
+    "title_cn": "杯沿裹料（Rim）",
+    "content": "Rimming coats the glass rim with salt, sugar or spices to add flavor contrast. Salt rim for Margarita, sugar rim for sidecars and daiquiris, spiced rims for seasonal drinks. Method: moisten rim with citrus wedge, dip into salt/sugar on a plate, tap off excess. Only moisten the outer rim so the drink itself isn't seasoned. Key to Margarita's salt-acid contrast.",
+    "content_cn": "杯沿裹料是在杯沿覆盖盐、糖或香料，增加风味对比。玛格丽特用盐边、边车和代基里用糖边、季节饮品用香料边。方法：用柑橘片湿润杯沿，将杯口在装有盐/糖的碟子上蘸取，轻拍去除多余。只湿润外沿，避免饮品本身被调味。盐边是玛格丽特咸酸对比的关键。英中术语：Rim=杯沿裹料，Salt rim=盐边。",
+    "tags": ["technique", "rim", "garnish", "margarita"]
+  },
+  {
+    "id": "tech_chill_glass",
+    "doc_type": "technique",
+    "title": "Chilling & Preparation 冰镇与准备",
+    "title_cn": "冰镇酒杯与准备工作",
+    "content": "Chilling the glass keeps drinks colder longer and improves texture. Methods: fill glass with ice while preparing (or place in freezer 10+ minutes). Pre-chilled glasses are essential for martinis and other up drinks. Proper prep: have all ingredients, tools and ice ready before starting; use fresh large ice cubes (they melt slower than crushed).",
+    "content_cn": "冰镇酒杯能让饮品保持更长时间低温并改善口感。方法：调制前在杯中装满冰块（或放入冷冻柜 10 分钟以上）。马提尼等‘纯喝’（up）饮品必须使用冰镇杯。准备要点：调制前备齐材料、工具和冰块；使用新鲜的大冰块（比碎冰融化慢，稀释更可控）。英中术语：Chill=冰镇，Up=不加冰上杯，On the rocks=加冰上杯。",
+    "tags": ["technique", "chilling", "preparation", "glass"]
+  },
+  {
+    "id": "tech_double_strain",
+    "doc_type": "technique",
+    "title": "Double Strain 双重过滤",
+    "title_cn": "双重过滤（Double Strain）",
+    "content": "Double straining passes the drink through both a Hawthorne strainer and a fine-mesh sieve, catching tiny ice shards, fruit pulp and herb bits. Used when shaking with fresh ingredients or when a clean silky texture is desired. Essential for drinks with muddled fruit, crushed ice or egg white (removes any solids and gives a smooth head).",
+    "content_cn": "双重过滤是将饮品同时经过雪克壶自带的滤网和细网筛，滤掉细碎冰渣、果肉和香草碎。当配方含鲜果、碎冰或蛋清时几乎必须使用——它能保证口感干净丝滑，蛋清饮品才能打出细腻泡沫头。英中术语：Double strain=双重过滤，Hawthorne strainer=雪克壶滤网，Fine mesh sieve=细网筛。",
+    "tags": ["technique", "strain", "texture", "egg-white"]
+  }
+]

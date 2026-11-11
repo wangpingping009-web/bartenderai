@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# 环境与密钥
+.env
+*.pem
+*.key
+
+# 数据（raw/processed 是生成物，不入库；knowledge 知识库内容入库）
+**/data/raw/
+**/data/processed/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite3
+*.jsonl
+backend/data/_inspect.txt
+
+# Docker 运行时数据（milvus/etcd 数据库、审计日志——177MB 运行时状态，绝不入库）
+volumes/
+
+# 模型权重（6.5GB bge 嵌入模型，运行时下载，不入库）
+models/
+
+# Windows 命令残留垃圾（"app;D" 这类）
+*;D
+
+# 前端
+node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# 日志
+logs/
+*.log
+
+# 其他
+.DS_Store

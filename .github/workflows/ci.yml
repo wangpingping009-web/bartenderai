@@ -1,0 +1,86 @@
+name: CI
+
+# 全自动流水线（M6）：push / PR 自动跑确定性测试 + 构建检查。
+# 推送到 GitHub 后立即生效；无需手动跑测试。
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+          cache-dependency-path: backend/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Deterministic tests (no LLM / no Milvus)
+        run: pytest -q -m "not e2e"
+        env:
+          PYTHONIOENCODING: "utf-8"
+
+      - name: Run database migration
+        run: alembic upgrade head
+        env:
+          DATABASE_URL: sqlite:///data/ci.db
+
+      - name: Validate local BM25 quality gates
+        run: |
+          python scripts/benchmark_retrieval.py --modes bm25
+          python -c "import json; r=json.load(open('data/processed/retrieval_benchmark.json')); m=r['modes']['bm25']; assert m['recall_at_5'] >= .85 and m['mrr_at_5'] >= .75 and m['no_answer_precision'] >= .90"
+
+      - name: Verify backend boots
+        run: python -c "from app.api.main import app; print('app OK,', len(app.routes), 'route objects')"
+        env:
+          PYTHONIOENCODING: "utf-8"
+
+  frontend-build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install, test & build
+        run: |
+          npm ci
+          npm test
+          npm run build
+
+  docker-smoke:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate compose configuration
+        run: docker compose config --quiet
+      - name: Build application images
+        run: docker compose --profile app build backend frontend
+
+# 说明：e2e 测试（真实 LLM + Milvus）需要 API Key，不在 PR 流水线里跑。
+# 需要时手动触发：
+#   workflow_dispatch 或用 `pytest -m e2e` 在配好 .env 的环境跑。

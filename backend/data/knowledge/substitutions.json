@@ -1,0 +1,74 @@
+[
+  {
+    "id": "sub_acid_lime_lemon",
+    "doc_type": "substitution",
+    "title": "Lime Juice ↔ Lemon Juice",
+    "title_cn": "青柠汁 ↔ 柠檬汁",
+    "content": "Substitution rule: lemon and lime juice are interchangeable at a 1:1 ratio for most cocktails. Lime is slightly more bitter and floral, lemon slightly brighter and more tart. When substituting, taste-test and adjust by 5-10% if needed. For drinks where lime is the signature (Margarita, Daiquiri, Mojito), prefer lime; lemon produces an acceptable but noticeably different drink.",
+    "content_cn": "替代规则：柠檬汁与青柠汁在多数鸡尾酒中可以 1:1 互换。青柠略偏苦和花香，柠檬更明亮酸爽。替换后建议试喝并按需微调 5-10%。在青柠是招牌风味的配方中（玛格丽特、代基里、莫吉托），优先用青柠；换柠檬做出的饮品可接受但风味有明显差异。依据：两者同属柑橘酸源，酸度接近。",
+    "tags": ["substitution", "acid", "citrus", "1:1"]
+  },
+  {
+    "id": "sub_sweet_syrup",
+    "doc_type": "substitution",
+    "title": "Simple Syrup ↔ Honey / Agave / Maple",
+    "title_cn": "糖浆 ↔ 蜂蜜/龙舌兰糖浆/枫糖浆",
+    "content": "Substitution rule: simple syrup can be replaced 1:1 by honey syrup (2:1 honey:water), agave nectar, or maple syrup. Each adds its own flavor: honey adds floral depth, agave adds light sweetness that dissolves cleanly (ideal for tequila drinks), maple adds woody warmth (great in autumn cocktails). Since these are sweeter than simple syrup, use about 20% less or adjust to taste.",
+    "content_cn": "替代规则：简单糖浆（1:1 糖:水）可用蜂蜜水（2:1）、龙舌兰糖浆或枫糖浆 1:1 替代。各自带独特风味：蜂蜜加花香深度、龙舌兰糖浆清甜易溶（龙舌兰调酒绝配）、枫糖浆带木质温暖感（适合秋季饮品）。注意：三者比简单糖浆更甜，建议用量减约 20% 或按口味调整。依据：功能等价（都是甜味源），风味差异用于创意发挥。",
+    "tags": ["substitution", "sweet", "syrup", "honey"]
+  },
+  {
+    "id": "sub_bitters",
+    "doc_type": "substitution",
+    "title": "Bitters ↔ Other Bitters / Amaro",
+    "title_cn": "苦精 ↔ 其他苦精/阿马罗",
+    "content": "Substitution rule: Angostura bitters can be replaced by other aromatic bitters (Peychaud's, orange bitters) at equal drops, or by a bar spoon of a bitter amaro (Campari, Aperol, Fernet) when a softer, more present bitterness is wanted. Aromatic bitters are highly concentrated; never exceed 2-3 dashes. Amaro substitution changes color and sweetness, so reduce simple syrup slightly.",
+    "content_cn": "替代规则：安格斯图拉苦精可用其他芳香苦精（佩肖、橙味苦精）按等滴数替代；若想要更柔和明显的苦味，可用一吧勺苦味阿马罗（金巴利、阿佩罗、菲奈特）替代。芳香苦精高度浓缩，单杯不超过 2-3 滴。阿马罗替代会改变颜色和甜度，需略减简单糖浆。依据：苦精都是‘苦味调味剂’，但浓度差异大，需严格控量。",
+    "tags": ["substitution", "bitter", "bitters", "amaro"]
+  },
+  {
+    "id": "sub_gin_vodka",
+    "doc_type": "substitution",
+    "title": "Gin ↔ Vodka",
+    "title_cn": "金酒 ↔ 伏特加",
+    "content": "Substitution rule: gin and vodka are interchangeable 1:1 in most cocktails, but with a major flavor difference: gin adds botanical juniper character, vodka is neutral. Swap gin→vodka makes a drink cleaner but less interesting (e.g., Vesper→dry Martini). Swap vodka→gin adds herbal complexity (e.g., a Gin Bloody Mary). Acceptable when juniper flavor is welcome or neutral is preferred.",
+    "content_cn": "替代规则：金酒与伏特加在多数鸡尾酒中可 1:1 互换，但风味差异显著：金酒带杜松子植物香气，伏特加完全中性。金酒→伏特加会让饮品更干净但层次变少（如 Vesper 变成干马提尼）；伏特加→金酒则增加草本复杂度（如金酒版血腥玛丽）。当配方不强调某一方特色时可互换。依据：酒精强度相同、可塑性相同，风味风格不同。",
+    "tags": ["substitution", "base", "gin", "vodka", "neutral"]
+  },
+  {
+    "id": "sub_white_dark_rum",
+    "doc_type": "substitution",
+    "title": "White Rum ↔ Dark Rum",
+    "title_cn": "白朗姆 ↔ 黑朗姆",
+    "content": "Substitution rule: white and dark rum are interchangeable 1:1, but dark rum adds molasses/caramel depth while white rum is clean and light. Swap white→dark makes a Mojito richer and spicier; swap dark→white makes a drink lighter. For tropical classics that specify one, keep the specified style when possible; otherwise adjust sweetness perception with a touch of syrup.",
+    "content_cn": "替代规则：白朗姆与黑朗姆可 1:1 互换，但黑朗姆带糖蜜焦糖的深度，白朗姆干净清爽。白→黑会让莫吉托更浓郁带香料感；黑→白则更轻盈。热带经典配方通常指明风格，能保持尽量保持；确需替换时，若换成更淡的朗姆可略加糖浆补甜感。依据：同源（甘蔗）、酒精度相近，陈年程度决定风味深度。",
+    "tags": ["substitution", "rum", "white", "dark", "tropical"]
+  },
+  {
+    "id": "sub_soda_tonic",
+    "doc_type": "substitution",
+    "title": "Soda Water ↔ Tonic Water",
+    "title_cn": "苏打水 ↔ 汤力水",
+    "content": "Substitution rule: soda water and tonic water are interchangeable 1:1 for fizz volume, but tonic is sweet and bitter (quinine) while soda is neutral. Swap soda→tonic adds bitterness and sweetness (reduce simple syrup by half); swap tonic→soda makes a drink drier and less complex (e.g., Gin Soda instead of Gin Tonic). For low-sugar needs, use soda + a dash of citrus.",
+    "content_cn": "替代规则：苏打水与汤力水在气泡量上可 1:1 互换，但汤力水带甜苦味（奎宁），苏打水中性。苏打→汤力会增加苦甜（需将简单糖浆减半）；汤力→苏打让饮品更干爽简单（如金苏打代替金汤力）。低糖需求下可用苏打水加一点柑橘汁代替。依据：同为碳酸水，甜苦是主要差异。",
+    "tags": ["substitution", "carbonated", "soda", "tonic", "low-sugar"]
+  },
+  {
+    "id": "sub_egg_foam",
+    "doc_type": "substitution",
+    "title": "Egg White ↔ Aquafaba / Foam Alternatives",
+    "title_cn": "蛋清 ↔ 鹰嘴豆水/起泡替代",
+    "content": "Substitution rule: raw egg white in sours can be replaced by aquafaba (chickpea water) at a 1:1 ratio for an identical silky foam (vegan-safe), or by 2 drops of Fee Brothers Fee Foam. Nutritionally and functionally the foaming is driven by proteins; aquafaba needs a slightly longer shake for best foam. For those avoiding raw eggs for health or taste reasons, these are clean swaps.",
+    "content_cn": "替代规则：酸酒中的生蛋清可用鹰嘴豆水（aquafaba）1:1 替代，泡沫效果几乎相同且适合素食者；也可用 2 滴 Fee Foam 起泡剂。蛋清和鹰嘴豆水的起泡都靠蛋白质，鹰嘴豆水需多摇几秒效果最佳。出于健康或口味原因不愿用生蛋清时，这是干净利落的替换。依据：功能等价（蛋白质起泡），无生蛋安全顾虑。",
+    "tags": ["substitution", "foam", "egg-white", "vegan", "texture"]
+  },
+  {
+    "id": "sub_vermouth",
+    "doc_type": "substitution",
+    "title": "Sweet Vermouth ↔ Dry Vermouth",
+    "title_cn": "甜味美思 ↔ 干味美思",
+    "content": "Substitution rule: sweet (rosso) and dry vermouth are not directly interchangeable — sweet adds sugar and body, dry adds herbal sharpness. A dry swap for sweet (e.g., in a Manhattan) requires adding ~1/4 tsp simple syrup per 30ml to balance; a sweet swap for dry (e.g., in a Martini) makes the drink too rich — better to reduce to half and add a dash of orange bitters. When only sweetness matters, use white vermouth as a midpoint.",
+    "content_cn": "替代规则：甜味美思与干味美思不可直接互换——甜味美思加糖与酒体，干味美思加草本锐度。干代甜（如曼哈顿）需每 30ml 补约 1/4 茶匙糖浆平衡；甜代干（如马提尼）会过浓，建议减半量并加一滴橙味苦精。若只需要折中，白色味美思是中间选项。依据：两者的糖分差异是核心，功能定位不同。",
+    "tags": ["substitution", "vermouth", "sweet", "dry"]
+  }
+]

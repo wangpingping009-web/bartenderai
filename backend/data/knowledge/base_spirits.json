@@ -1,0 +1,65 @@
+[
+  {
+    "id": "spirit_gin",
+    "doc_type": "base_spirit",
+    "title": "Gin",
+    "title_cn": "金酒（杜松子酒）",
+    "content": "Gin is a distilled spirit flavored primarily with juniper berries, plus botanicals such as citrus peel, coriander, angelica root and orris. London Dry is the most common style: crisp, dry, piney with citrus top notes. Used in Martini, Negroni, Gin Tonic, Gimlet, Tom Collins, Singapore Sling. Pairs well with citrus, tonic, vermouth, cucumber and elderflower.",
+    "content_cn": "金酒（Gin）是以杜松子为主要香料、辅以柑橘皮、芫荽、当归根等植物原料蒸馏而成的烈酒。伦敦干金酒是最常见风格：干爽、带松针气息和柑橘前调。经典用法：马提尼（Martini）、尼格罗尼（Negroni）、金汤力（Gin Tonic）、金骡（Gimlet）、汤姆柯林斯（Tom Collins）。风味搭配：柑橘、汤力水、味美思、黄瓜、接骨木花。金酒是鸡尾酒六大基酒中风味表现力最强的，常作为鸡尾酒的‘骨架’。",
+    "tags": ["base_spirit", "gin", "dry", "botanical"]
+  },
+  {
+    "id": "spirit_whiskey",
+    "doc_type": "base_spirit",
+    "title": "Whiskey / Whisky",
+    "title_cn": "威士忌",
+    "content": "Whiskey is a distilled spirit aged in wooden casks, typically oak. Major styles: Bourbon (corn-based, sweet, vanilla), Rye (spicy, peppery), Scotch (smoky/peaty for Islay, malty for Speyside), Irish (smooth, triple-distilled), Japanese (elegant, balanced). Used in Old Fashioned, Manhattan, Whiskey Sour, Mint Julep, Boulevardier, Highball. Pairs well with bitters, sweet vermouth, lemon, mint, honey and smoke.",
+    "content_cn": "威士忌是在橡木桶中陈年的蒸馏烈酒。主要风格：波本威士忌（玉米为主，甜美香草）、黑麦威士忌（辛辣）、苏格兰威士忌（艾雷岛重泥煤/斯佩塞麦芽香）、爱尔兰威士忌（顺滑三次蒸馏）、日本威士忌（精致平衡）。经典用法：古典（Old Fashioned）、曼哈顿（Manhattan）、威士忌酸（Whiskey Sour）、薄荷朱利普（Mint Julep）。风味搭配：苦精、甜味美思、柠檬、薄荷、蜂蜜。威士忌自带木质与焦糖深度，适合需要‘厚重感’的调酒。",
+    "tags": ["base_spirit", "whiskey", "bourbon", "aged"]
+  },
+  {
+    "id": "spirit_rum",
+    "doc_type": "base_spirit",
+    "title": "Rum",
+    "title_cn": "朗姆酒",
+    "content": "Rum is distilled from sugarcane byproducts (molasses or sugarcane juice). Styles: White/Light rum (clean, neutral, floral), Gold/Aged rum (caramel, oak), Dark/Black rum (heavy, molasses, tropical), Agricole (made from fresh cane juice, grassy). Used in Mojito, Daiquiri, Piña Colada, Mai Tai, Dark 'n' Stormy, Cuba Libre. Pairs well with lime, mint, pineapple, coconut, cola and bitters.",
+    "content_cn": "朗姆酒由甘蔗糖蜜或甘蔗汁蒸馏而成。风格：白朗姆（干净中性、带花香）、金黄/陈年朗姆（焦糖橡木）、黑朗姆（浓重糖蜜、热带风味）、甘蔗朗姆（鲜蔗汁、青草感）。经典用法：莫吉托（Mojito）、代基里（Daiquiri）、椰林飘香（Piña Colada）、迈泰（Mai Tai）。风味搭配：青柠、薄荷、菠萝、椰子、可乐。朗姆酒是热带鸡尾酒的主角，甜感与焦糖感明显。",
+    "tags": ["base_spirit", "rum", "tropical", "molasses"]
+  },
+  {
+    "id": "spirit_tequila",
+    "doc_type": "base_spirit",
+    "title": "Tequila",
+    "title_cn": "龙舌兰酒",
+    "content": "Tequila is distilled from the blue agave plant in Mexico. Styles: Blanco/Silver (unaged, bright agave, pepper), Reposado (aged 2-12 months, soft oak), Añejo (aged 1-3 years, rich oak, vanilla), Extra Añejo (3+ years). 100% agave is the quality mark. Used in Margarita, Paloma, Tequila Sunrise, Bloody Maria. Pairs well with lime, salt, orange, grapefruit, tomato and chili.",
+    "content_cn": "龙舌兰酒由墨西哥蓝色龙舌兰（agave）蒸馏而成。风格：白龙舌兰（未陈年、明亮的龙舌兰气息、带胡椒感）、微陈（2-12个月、柔和的橡木）、陈年（1-3年、浓郁橡木香草）。100% 龙舌兰是品质标志。经典用法：玛格丽特（Margarita）、帕洛玛（Paloma）、龙舌兰日出（Tequila Sunrise）。风味搭配：青柠、盐、橙子、西柚、番茄、辣椒。龙舌兰有独特植物甘甜与矿物感，适合酸甜平衡的调酒。",
+    "tags": ["base_spirit", "tequila", "agave", "margarita"]
+  },
+  {
+    "id": "spirit_vodka",
+    "doc_type": "base_spirit",
+    "title": "Vodka",
+    "title_cn": "伏特加",
+    "content": "Vodka is a neutral spirit distilled from grains or potatoes, filtered to be clean and flavorless. Its role in cocktails is to add alcoholic strength without changing flavor profile, making it the most flexible base. Used in Moscow Mule, Bloody Mary, Cosmopolitan, Screwdriver, White Russian, Espresso Martini. Pairs well with nearly everything: citrus, cranberry, tomato, coffee, cream and ginger beer.",
+    "content_cn": "伏特加是由谷物或马铃薯蒸馏而成的中性烈酒，追求纯净无味。在鸡尾酒中的角色是‘只提供酒劲、不改变风味’，因此是最百搭的基酒。经典用法：莫斯科骡子（Moscow Mule）、血腥玛丽（Bloody Mary）、大都会（Cosmopolitan）、螺丝刀（Screwdriver）、白色俄罗斯（White Russian）、浓缩咖啡马提尼（Espresso Martini）。风味搭配几乎不受限：柑橘、蔓越莓、番茄、咖啡、奶油、姜汁啤酒。新手调酒从伏特加入手最稳妥。",
+    "tags": ["base_spirit", "vodka", "neutral", "versatile"]
+  },
+  {
+    "id": "spirit_brandy",
+    "doc_type": "base_spirit",
+    "title": "Brandy / Cognac",
+    "title_cn": "白兰地/干邑",
+    "content": "Brandy is a spirit distilled from wine or fermented fruit juice. Cognac (from Cognac region, France) and Armagnac are the premium grape brandies; fruit brandies include Calvados (apple) and Kirsch (cherry). Rich, fruity, warming with oak notes. Used in Sidecar, Brandy Alexander, Vieux Carré, Champagne Cocktail, Between the Sheets. Pairs well with lemon, orange liqueur, cream, coffee and sparkling wine.",
+    "content_cn": "白兰地由葡萄酒或发酵果汁蒸馏而成。干邑（Cognac，法国干邑产区）和雅文邑是顶级葡萄白兰地；水果白兰地包括卡尔瓦多斯（苹果）和樱桃白兰地。风味：果香浓郁、温暖、带橡木气息。经典用法：边车（Sidecar）、白兰地亚历山大（Brandy Alexander）、老广场（Vieux Carré）、香槟鸡尾酒。风味搭配：柠檬、橙味利口酒、奶油、咖啡、起泡酒。白兰地是餐后酒的经典选择。",
+    "tags": ["base_spirit", "brandy", "cognac", "fruity"]
+  },
+  {
+    "id": "liqueur",
+    "doc_type": "base_spirit",
+    "title": "Liqueurs & Aperitifs",
+    "title_cn": "利口酒与开胃酒",
+    "content": "Liqueurs are sweetened spirits with added flavors: orange (Cointreau, Triple Sec, Grand Marnier), herbal (Benedictine, Chartreuse, Amaro), coffee (Kahlúa), cream (Baileys), floral (St-Germain elderflower). Aperitifs like vermouth (sweet/dry) and Campari add bitterness and complexity. These are modifiers that shape a cocktail's character. Key pairings: Cointreau+tequila+lime=Margarita, Campari+gin+sweet vermouth=Negroni.",
+    "content_cn": "利口酒是加糖加味的甜化烈酒：橙味（君度 Cointreau、三秒 Triple Sec、金万利 Grand Marnier）、草本（当酒 Benedictine、查特酒 Chartreuse、阿马罗 Amaro）、咖啡（卡鲁哇 Kahlúa）、奶油（百利甜）、花香（圣日耳曼接骨木花）。味美思（甜/干）和金巴利（Campari）等开胃酒提供苦味与复杂度。它们是塑造鸡尾酒性格的‘调味剂’。经典组合：君度+龙舌兰+青柠=玛格丽特；金巴利+金酒+甜味美思=尼格罗尼。",
+    "tags": ["liqueur", "aperitif", "vermouth", "modifier"]
+  }
+]
